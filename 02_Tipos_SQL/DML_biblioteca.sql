@@ -40,31 +40,31 @@ INSERT INTO livros (Titulo, Isbn, Ano, Categoria_id)
 VALUES ('1984', '978-0141036144', 1949, 3);
 
 INSERT INTO livros (Titulo, Isbn, Ano, Categoria_id)
-VALUES ('A Revolução dos Bichos', '978-0141036137', 1945, 4);
+VALUES ('A Revolução dos Bichos', '978-0141036137', 1945, 3);
 
 INSERT INTO livros (Titulo, Isbn, Ano, Categoria_id)
-VALUES ('Autobiografia de um Iogue', '978-0876120791', 1946, 5);
+VALUES ('Autobiografia de um Iogue', '978-0876120791', 1946, 4);
 
 INSERT INTO livros (Titulo, Isbn, Ano, Categoria_id)
-VALUES ('Nada Pode Me Ferir', '978-1544512286', 2018, 6);
+VALUES ('Nada Pode Me Ferir', '978-1544512286', 2018, 4);
 
 INSERT INTO livros (Titulo, Isbn, Ano, Categoria_id)
-VALUES ('O Caibalion', '978-1577314734', 1908, 7);
+VALUES ('O Caibalion', '978-1577314734', 1908, 5);
 
 INSERT INTO livros (Titulo, Isbn, Ano, Categoria_id)
-VALUES ('Corpus Hermeticum', '978-0486204494', 3, 8);
+VALUES ('Corpus Hermeticum', '978-0486204494', 3, 5);
 
 INSERT INTO livros (Titulo, Isbn, Ano, Categoria_id)
-VALUES ('Romeu e Julieta', '978-0451523958', 1559, 8);
+VALUES ('Romeu e Julieta', '978-0451523958', 1559, 6);
 
 INSERT INTO livros (Titulo, Isbn, Ano, Categoria_id)
-VALUES ('Poesia que Transforma', '978‑8543105758', 2018, 7);
+VALUES ('Poesia que Transforma', '978‑8543105758', 2018, 6);
 
 INSERT INTO livros (Titulo, Isbn, Ano, Categoria_id)
-VALUES ('Mais Esperto que o Diabo', '978-8543101655', 2011, 8);
+VALUES ('Mais Esperto que o Diabo', '978-8543101655', 2011, 7);
 
 INSERT INTO livros (Titulo, Isbn, Ano, Categoria_id)
-VALUES ('O Homem Mais Rico da Babilônia', '978-0451205360', 1926, 6);
+VALUES ('O Homem Mais Rico da Babilônia', '978-0451205360', 1926, 7);
 
 -- READ (R) - SELECT
 
