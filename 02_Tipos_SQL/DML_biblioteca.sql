@@ -5,6 +5,7 @@
 -- Inserção de dados nas tabelas:
 
 -- Inserindo categorias
+-- EXERCÍCIO 
 INSERT INTO categorias (nome, descricao)
 VALUES ('Ficção Científica', 'Livros que exploram conceitos científicos');
 
@@ -71,15 +72,44 @@ VALUES ('O Homem Mais Rico da Babilônia', '978-0451205360', 1926, 7);
 -- Consultas ao banco de dados:
 
 -- Selecionar todos os livros
+SELECT * FROM livros;
+
+SELECT Cat.nome, Liv.titulo
+FROM livros AS Liv
+JOIN Categorias AS Cat
+ON Cat.id = Liv.categoria_id
+
+-- Selecionar livros lançados a partir de 1950
+SELECT * FROM livros
+WHERE ano >= 1950
+ORDER BY ano;
+
+SELECT Cat.nome, Liv.titulo, Liv.ano
+FROM livros AS Liv
+JOIN Categorias AS Cat
+ON Cat.id = Liv.categoria_id
+WHERE Liv.ano >= 1950;
 
 -- Selecionar livros com informações de categoria
 -- UPDATE (U)
+SELECT * FROM livros
+WHERE Id = 1;
+
+UPDATE livros
+SET ano = 1952
+WHERE Id = 1;
 
 -- Atualização de registros:
 
 -- Atualizando o ano de um livro
 
 -- DELETE (D)
+SELECT * FROM livros
+WHERE Id = 1;
+
+DELETE FROM livros
+WHERE Id = 1;
+
 
 -- Exclusão de registros:
 
@@ -110,6 +140,7 @@ CREATE TABLE livros (
     Ano INT NOT NULL,
     Categoria_Id INT NOT NULL
 );
+
 
 ALTER TABLE livros
 ADD CONSTRAINT fk_livros_categorias
