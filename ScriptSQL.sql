@@ -1,18 +1,7 @@
--- Resolução
-
--- Implementação SQL
-
--- 1. Criação do Banco de Dados
-
--- Criação do banco de dados
 CREATE DATABASE eventos_db;
 
--- Seleciona o banco de dados
 USE eventos_db;
 
--- 2. Criação das Tabelas
-
--- Tabela de palestrantes
 CREATE TABLE palestrantes (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
     nome VARCHAR(100) NOT NULL,
@@ -20,7 +9,6 @@ CREATE TABLE palestrantes (
     email VARCHAR(100) NOT NULL
 );
 
--- Tabela de eventos
 CREATE TABLE eventos (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
     titulo VARCHAR(200) NOT NULL,
@@ -30,7 +18,6 @@ CREATE TABLE eventos (
     palestrante_id INT NOT NULL
 );
 
--- Tabela de inscrições
 CREATE TABLE inscricoes (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     evento_id INT NOT NULL,
@@ -40,7 +27,6 @@ CREATE TABLE inscricoes (
     presente TINYINT
 );
 
--- Chaves estrangeiras
 ALTER TABLE eventos
 ADD CONSTRAINT fk_eventos_palestrantes
 FOREIGN KEY (palestrante_id) REFERENCES palestrantes(id);
@@ -49,25 +35,18 @@ ALTER TABLE inscricoes
 ADD CONSTRAINT fk_inscricoes_eventos
 FOREIGN KEY (evento_id) REFERENCES eventos(id);
 
--- 3. Inserção de Dados Iniciais
-
--- Inserir palestrantes
 INSERT INTO palestrantes (nome, especialidade, email)
 VALUES ('Maria Silva', 'especialista em Inteligência Artificial', 'maria@exemplo.com');
 
 INSERT INTO palestrantes (nome, especialidade, email)
 VALUES ('João Santos', 'especialista em Marketing Digital', 'joao@exemplo.com');
 
-
--- Inserir eventos
 INSERT INTO eventos (titulo, data_evento, locais , capacidade, palestrante_id)
 VALUES ('Workshop de IA', '2023-11-15', 'Auditório Principal', 100, 1 );
 
 INSERT INTO eventos (titulo, data_evento, locais , capacidade, palestrante_id)
 VALUES ('Conferência de Marketing', '2023-12-10', 'Sala de Convenções', 200, 2 );
 
-
--- Inserir algumas inscrições
 INSERT INTO inscricoes (evento_id, nome_participante, email)
 VALUES (1, 'Carlos Oliveira', 'carlos@email.com' );
 
@@ -76,4 +55,6 @@ VALUES (1, 'Ana Souza', 'ana@email.com' );
 
 INSERT INTO inscricoes (evento_id, nome_participante, email )
 VALUES (2, 'Bruno Lima', 'bruno@email.com');
+
+
 
